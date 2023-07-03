@@ -1,5 +1,5 @@
 const box = document.querySelector('.box');
-const h1Maker = document.querySelector('h1');
+const h2Maker = document.querySelector('h2');
 const gameBoard = document.querySelector('.game');
 const dim = gameBoard.getBoundingClientRect();
 const btn = document.createElement('button');
@@ -51,14 +51,14 @@ window.addEventListener('keyup',(e)=>{
     }
 })
 
-h1Maker.addEventListener('click',(e)=>{
+h2Maker.addEventListener('click',(e)=>{
     //console.log(dim); 
     const ele = maker('div');   
     //console.log(ele);
 })
 
 function updateScore(){
-    h1Maker.innerHTML = `Score : ${game.score}`;
+    h2Maker.innerHTML = `Score : ${game.score}`;
 }
 
 
