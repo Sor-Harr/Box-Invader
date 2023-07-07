@@ -2,9 +2,11 @@ const box = document.querySelector('.box');
 const h2Maker = document.querySelector('h2');
 const gameBoard = document.querySelector('.game');
 const dim = gameBoard.getBoundingClientRect();
-const btn = document.createElement('button');
-btn.textContent = 'START';
-document.body.append(btn);
+const btn = document.querySelector('.start_button');
+const rightarrowbtn = document.querySelector('.rbtn');
+const leftarrowbtn = document.querySelector('.lbtn');
+const downarrowbtn = document.querySelector('.dbtn');
+const uparrowbtn = document.querySelector('.ubtn');
 //console.log(dim);
 const game = {
     size:30,
@@ -37,7 +39,38 @@ btn.addEventListener('click',(e)=>{
         game.status = false;
     }
 })
-
+rightarrowbtn.addEventListener('mousedown',(e)=>{
+    
+    keyz.ArrowRight=true;
+})
+rightarrowbtn.addEventListener('mouseup',(e)=>{
+    
+    keyz.ArrowRight=false;
+})
+leftarrowbtn.addEventListener('mousedown',(e)=>{
+    
+    keyz.ArrowLeft=true;
+})
+leftarrowbtn.addEventListener('mouseup',(e)=>{
+    
+    keyz.ArrowLeft=false;
+})
+downarrowbtn.addEventListener('mousedown',(e)=>{
+    
+    keyz.ArrowDown=true;
+})
+downarrowbtn.addEventListener('mouseup',(e)=>{
+    
+    keyz.ArrowDown=false;
+})
+uparrowbtn.addEventListener('mousedown',(e)=>{
+    
+    keyz.ArrowUp=true;
+})
+uparrowbtn.addEventListener('mouseup',(e)=>{
+    
+    keyz.ArrowUp=false;
+})
 updateScore();
 window.addEventListener('keydown',(e)=>{
     if(e.code in keyz){
