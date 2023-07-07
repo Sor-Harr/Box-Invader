@@ -39,35 +39,35 @@ btn.addEventListener('click',(e)=>{
         game.status = false;
     }
 })
-rightarrowbtn.addEventListener('mousedown',(e)=>{
+rightarrowbtn.addEventListener('touchstart',(e)=>{
     
     keyz.ArrowRight=true;
 })
-rightarrowbtn.addEventListener('mouseup',(e)=>{
+rightarrowbtn.addEventListener('touchend',(e)=>{
     
     keyz.ArrowRight=false;
 })
-leftarrowbtn.addEventListener('mousedown',(e)=>{
+leftarrowbtn.addEventListener('touchstart',(e)=>{
     
     keyz.ArrowLeft=true;
 })
-leftarrowbtn.addEventListener('mouseup',(e)=>{
+leftarrowbtn.addEventListener('touchend',(e)=>{
     
     keyz.ArrowLeft=false;
 })
-downarrowbtn.addEventListener('mousedown',(e)=>{
+downarrowbtn.addEventListener('touchstart',(e)=>{
     
     keyz.ArrowDown=true;
 })
-downarrowbtn.addEventListener('mouseup',(e)=>{
+downarrowbtn.addEventListener('touchend',(e)=>{
     
     keyz.ArrowDown=false;
 })
-uparrowbtn.addEventListener('mousedown',(e)=>{
+uparrowbtn.addEventListener('touchstart',(e)=>{
     
     keyz.ArrowUp=true;
 })
-uparrowbtn.addEventListener('mouseup',(e)=>{
+uparrowbtn.addEventListener('touchend',(e)=>{
     
     keyz.ArrowUp=false;
 })
