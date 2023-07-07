@@ -39,38 +39,48 @@ btn.addEventListener('click',(e)=>{
         game.status = false;
     }
 })
-rightarrowbtn.addEventListener('touchstart',(e)=>{
-    
-    keyz.ArrowRight=true;
-})
-rightarrowbtn.addEventListener('touchend',(e)=>{
-    
-    keyz.ArrowRight=false;
-})
-leftarrowbtn.addEventListener('touchstart',(e)=>{
-    
-    keyz.ArrowLeft=true;
-})
-leftarrowbtn.addEventListener('touchend',(e)=>{
-    
-    keyz.ArrowLeft=false;
-})
-downarrowbtn.addEventListener('touchstart',(e)=>{
-    
-    keyz.ArrowDown=true;
-})
-downarrowbtn.addEventListener('touchend',(e)=>{
-    
-    keyz.ArrowDown=false;
-})
-uparrowbtn.addEventListener('touchstart',(e)=>{
-    
-    keyz.ArrowUp=true;
-})
-uparrowbtn.addEventListener('touchend',(e)=>{
-    
-    keyz.ArrowUp=false;
-})
+if ("ontouchstart" in document.documentElement)
+{
+    rightarrowbtn.addEventListener('touchstart',(e)=>{
+        
+        keyz.ArrowRight=true;
+    })
+    rightarrowbtn.addEventListener('touchend',(e)=>{
+        
+        keyz.ArrowRight=false;
+    })
+    leftarrowbtn.addEventListener('touchstart',(e)=>{
+        
+        keyz.ArrowLeft=true;
+    })
+    leftarrowbtn.addEventListener('touchend',(e)=>{
+        
+        keyz.ArrowLeft=false;
+    })
+    downarrowbtn.addEventListener('touchstart',(e)=>{
+        
+        keyz.ArrowDown=true;
+    })
+    downarrowbtn.addEventListener('touchend',(e)=>{
+        
+        keyz.ArrowDown=false;
+    })
+    uparrowbtn.addEventListener('touchstart',(e)=>{
+        
+        keyz.ArrowUp=true;
+    })
+    uparrowbtn.addEventListener('touchend',(e)=>{
+        
+        keyz.ArrowUp=false;
+    })
+}
+else
+{
+    rightarrowbtn.style.display ="none";
+    leftarrowbtn.style.display ="none";
+    downarrowbtn.style.display ="none";
+    uparrowbtn.style.display ="none";
+}
 updateScore();
 window.addEventListener('keydown',(e)=>{
     if(e.code in keyz){
